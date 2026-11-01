@@ -1,0 +1,17 @@
+{
+  "name": "easy-bill-owner",
+  "version": "1.0.0",
+  "description": "EASY BILL Owner Panel",
+  "main": "main.js",
+  "author": "EASY BILL LK",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win nsis --x64 --publish never" },
+  "devDependencies": { "electron": "^33.2.0", "electron-builder": "^25.1.8" },
+  "build": {
+    "appId": "lk.easybill.owner",
+    "productName": "EASY BILL Owner",
+    "files": ["main.js", "index.html", "icons/**", "build/icon.png"],
+    "win": { "target": "nsis", "icon": "build/icon.ico" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true },
+    "directories": { "buildResources": "build" }
+  }
+}
